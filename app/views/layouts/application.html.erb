@@ -10,16 +10,22 @@
 <body>
   <header>
     <ul>
-      <li><%= link_to "トップページ", tweets_path %></li>
-      <li><a href="#">ツィート</a></li>
+      <li><%= link_to "Tweets", tweets_path %></li>
+      <li><%= link_to "投稿", new_tweet_path %></li>
+<% if user_signed_in? %>
+      <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+<% else %>
+      <li><%= link_to 'ログイン', new_user_session_path  %></li>
+      <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+<% end %>
     </ul>
   </header>
 
 <%= yield %>
 
   <footer>
-    <p>運営会社DIVE INTO CODE株式会社</p>
-    <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
+    <p>TWEETS !</p>
   </footer>
 
 </body>

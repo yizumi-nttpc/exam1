@@ -6,8 +6,8 @@
 <%= form_for(@tweet) do |f| %>
   <%= f.hidden_field :content %>
 
-  <p>ツィート:<%= @tweet.content %></p>
-  <%= f.submit "登録する", class: 'btn btn-primary btn-block' %>
+  <p>Content:<%= @tweet.content %></p>
+  <%= f.submit "送信する", class: 'btn btn-primary btn-block' %>
 <% end %>
 
 <%= form_for(@tweet, url: new_tweet_path, method: 'get') do |f| %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'top/index'
 
   resources :tweets, only: [:index, :new, :create, :edit, :update, :destroy] do

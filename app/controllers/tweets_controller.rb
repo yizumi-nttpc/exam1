@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_tweet, only: [:edit, :update, :destroy]
 
   def index
@@ -16,7 +17,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweets_params)
     if @tweet.save
-      flash[:success] = "ツィートしました！"
+      flash[:success] = "投稿しました！"
       redirect_to tweets_path
     else
       render 'new'

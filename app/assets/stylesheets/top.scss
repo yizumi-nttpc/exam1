@@ -1,7 +1,7 @@
 header {
   width: 100%;
-  background-color: #4682b4;
-  height: 54px;
+  background-color: #ffffff;
+  height: 48px;
 }
 
 header ul {
@@ -13,7 +13,7 @@ header ul a {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 header li {
@@ -25,14 +25,6 @@ header ul:after {
   content: "";
   display: block;
   clear: both;
-}
-
-.main-header {
-  padding-bottom: 15%;
-  width: 100%;
-  background-size: cover;
-  background-image: image-url("header.jpg");
-  background-attachment: fixed;
 }
 
 .main-header img {
@@ -56,9 +48,9 @@ header ul:after {
 
 footer {
   width: 100%;
-  background-color:#4682b4;
+  background-color:#ffffff;
   padding: 20px 0 10px 0;
-  color: white;
+  color: black;
   margin: auto;
   padding-bottom: 10px;
   font-size: 12px;
@@ -73,4 +65,9 @@ html {
 
 body {
   text-align: center;
+}
+
+.flash {
+  color: white;
+  padding-top: 10px;
 }
